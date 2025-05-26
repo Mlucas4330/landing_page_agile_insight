@@ -1,0 +1,292 @@
+/* Estilos adicionais para complementar o index.css */
+
+/* Efeito de glow para elementos neon */
+.neon-text {
+  color: #c5ff00;
+  text-shadow: 0 0 10px rgba(197, 255, 0, 0.7);
+}
+
+/* Melhorar o efeito de glassmorphism */
+.glass {
+  position: relative;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease;
+}
+
+.glass:hover {
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+/* Efeito de hover para cards */
+.glass-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Melhorar a aparência do vídeo */
+.video-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(197, 255, 0, 0.1);
+}
+
+.video-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 16px;
+  box-shadow: inset 0 0 10px rgba(197, 255, 0, 0.1);
+  pointer-events: none;
+}
+
+/* Efeito de pulsação para elementos de destaque */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(197, 255, 0, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(197, 255, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(197, 255, 0, 0);
+  }
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+/* Melhorar a aparência dos inputs do formulário */
+input.glass-button {
+  background: rgba(255, 255, 255, 0.7) !important;
+}
+
+input.glass-button:focus {
+  background: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Estilo para o botão de WhatsApp */
+.whatsapp-button {
+  background: rgba(37, 211, 102, 0.1);
+  transition: all 0.3s ease;
+}
+
+.whatsapp-button:hover {
+  background: rgba(37, 211, 102, 0.2);
+  box-shadow: 0 0 15px rgba(37, 211, 102, 0.3);
+}
+
+/* Ajustes para o cabeçalho fixo */
+.sticky-header {
+  transition: all 0.3s ease;
+}
+
+.sticky-header.scrolled {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Ajustes para o FAQ */
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details[open] summary {
+  margin-bottom: 10px;
+}
+
+details summary {
+  transition: all 0.3s ease;
+}
+
+details summary:hover {
+  color: #c5ff00;
+}
+
+/* Ajustes para tipografia */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+
+p, li, input, textarea {
+  font-weight: 300;
+}
+
+/* Carrossel de logos */
+.logo-carousel {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.logo-track {
+  display: flex;
+  animation: scroll 30s linear infinite;
+  width: calc(200px * 10); /* Ajuste baseado no número de logos */
+}
+
+.logo-slide {
+  width: 200px;
+  height: 100px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.logo-slide img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: grayscale(100%) brightness(1.2);
+  transition: filter 0.3s ease;
+}
+
+.logo-slide img:hover {
+  filter: grayscale(0%) brightness(1);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-200px * 5)); /* Metade do tamanho total para loop perfeito */
+  }
+}
+
+/* Estilo para o botão grande do logo com borda verde limão diagonal */
+.big-logo-button {
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  border-radius: 65px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  border: none;
+  overflow: hidden;
+}
+
+.big-logo-button::after {
+  content: '';
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  border-radius: 65px;
+  border: 4px solid transparent;
+  border-right: 4px solid #c5ff00;
+  border-bottom: 4px solid #c5ff00;
+  top: 0;
+  left: 0;
+  transform: rotate(135deg);
+}
+
+.big-logo-button img {
+  width: 60%;
+  height: auto;
+  filter: drop-shadow(0 0 10px rgba(197, 255, 0, 0.5));
+}
+
+/* Estilo para headline grande */
+.headline-container {
+  position: relative;
+  margin-bottom: 4rem;
+}
+
+.headline-agile {
+  font-size: 8rem;
+  line-height: 1;
+  font-weight: 700;
+  color: #000;
+}
+
+.headline-insight {
+  font-size: 8rem;
+  line-height: 1;
+  font-weight: 700;
+  color: #000;
+  position: relative;
+  display: inline-block;
+}
+
+/* Botões de benefícios com fundo cinza grafite, texto verde limão e seta maior - mais arredondados */
+.benefit-button {
+  background-color: #333;
+  color: #c5ff00;
+  padding: 0.75rem 1.25rem;
+  border-radius: 20px; /* Aumentado para mais arredondamento */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.benefit-button:hover {
+  background-color: #444;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.benefit-button .arrow {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-left: 12px;
+}
+
+/* Vídeo lateral flutuante */
+.floating-video-container {
+  transition: all 0.3s ease;
+}
+
+.floating-video-container video {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.whatsapp-floating-button {
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-floating-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(197, 255, 0, 0.2);
+}
+
+/* Responsividade para headline */
+@media (max-width: 768px) {
+  .headline-agile, .headline-insight {
+    font-size: 4rem;
+  }
+  
+  .big-logo-button {
+    width: 90px;
+    height: 90px;
+    border-radius: 45px;
+  }
+  
+  .big-logo-button::after {
+    width: 90px;
+    height: 90px;
+    border-radius: 45px;
+  }
+}
