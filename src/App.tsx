@@ -441,8 +441,8 @@ function App() {
               controlsList="nodownload nofullscreen"
               disablePictureInPicture
               autoPlay
-              // loop
-              // muted
+              loop
+              muted
               playsInline
               className="object-cover rounded-lg shadow-lg"
             >
